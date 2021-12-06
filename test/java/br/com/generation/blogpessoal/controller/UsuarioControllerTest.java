@@ -44,7 +44,7 @@ public class UsuarioControllerTest {
 	public void start() {
 	
 		LocalDate dataAdmin = LocalDate.parse("1990-07-22", DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-        usuarioAdmin = new Usuario(0L, "Administrador", "admin@email.com.br", "admin123", dataAdmin);
+        usuarioAdmin = new Usuario(0L, "Administrador", "admin@email.com.br", "admin123", dataAdmin, "admin", "foto");
 
 		if(!usuarioRepository.findByUsuario(usuarioAdmin.getUsuario()).isPresent()) {
 

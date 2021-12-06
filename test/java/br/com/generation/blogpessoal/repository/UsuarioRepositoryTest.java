@@ -26,7 +26,7 @@ public class UsuarioRepositoryTest {
 	void start() { 
 		
 		LocalDate data = LocalDate.parse("2000-07-22", DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-		Usuario usuario = new Usuario(0, "Joao da Silva", "joao@email.com.br", "13465278", data);
+		Usuario usuario = new Usuario(0, "Joao da Silva", "joao@email.com.br", "13465278", data, "admin", "foto");
 		
 		if (!usuarioRepository.findByUsuario(usuario.getUsuario()).isPresent())
 			usuarioRepository.save(usuario);
